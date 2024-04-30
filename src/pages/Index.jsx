@@ -1,15 +1,19 @@
-// Complete the Index page component here
-// Use chakra-ui
-import { Button } from "@chakra-ui/react"; // example
-import { FaPlus } from "react-icons/fa"; // example - use react-icons/fa for icons
+import { Box, Flex, Heading, Text, Button, Image, Link } from '@chakra-ui/react';
+import { FaRegCalendarAlt } from 'react-icons/fa';
 
 const Index = () => {
-  // TODO: Create the website here!
   return (
-    <Button>
-      Hello world! <FaPlus />
-    </Button>
-  ); // example
+    <Box bg="gray.50" minH="100vh" p={5}>
+      <Flex direction="column" align="center" justify="center" p={10}>
+        <Image src="/images/future-software-event.jpg" alt="Future of Software" boxSize="200px" objectFit="cover" borderRadius="full" mb={4} />
+        <Heading mb={4}>The Future of Software</Heading>
+        <Text fontSize="xl" mb={6}>Join us to explore groundbreaking innovations by leading LLM builders.</Text>
+        <Button colorScheme="blue" leftIcon={<FaRegCalendarAlt />} as={Link} href="https://typeform.com" isExternal>
+          Sign Up for the Event
+        </Button>
+      </Flex>
+    </Box>
+  );
 };
 
 export default Index;
